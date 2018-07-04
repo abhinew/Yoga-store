@@ -1,0 +1,14 @@
+header {
+    background-image: url("beach.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50vh;
+    width: 100%;
+}
+
+.title {
+    color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
