@@ -1,0 +1,65 @@
+Reader
+Codaisseur
+
+HTML5 & CSS3
+
+
+
+Courses
+Beginner Code Bootcamp
+HTML5 & CSS3
+Git Collaboration
+Git Collaboration
+
+Since yesterdays' lesson you know how to push your changes to Github. Lets add collaborating with others.
+Cloning
+
+Lets say you know where a repository lives on Github. You want to have that code on your local system, so you can work on it. In other words; you want to have a local clone of the remote repository.
+
+On Github, find the ssh-url of the repo. In your terminal, you cd into your projects directory, and in there you enter the git clone command:
+
+git clone some-ssh-url-of-the-repo
+
+This clones the full repo from github into your system.
+Adding collaborators
+
+Everyone on the internet could clone your repository at this moment, but no one can push any changes to it. You should give permission to all the members in your team to be able to push their changes like this:
+
+    Every person that you invited will be getting an email. They need to confirm the invitation before they can push anything from their terminals.
+
+Branching
+
+In your local system you will never ever make commits in the main branch, better known as master. For every feature you will work in a specific branch (Some developers call this a topic branch or a feature branch).
+
+First you want to make sure you are completely up to date with the master branch, and after that, create a branch for your feature
+
+git checkout master             # makes sure you are in the master branch
+git pull origin master          # pulls all changes from origin, you're up to date
+git checkout -b style-homepage  # create a new branch for your feature
+
+The last step created a new branch that is based on all up-to-date changes from Github.
+
+Time to work on your features, making commits and committing them as usually. After each commit you make, you want to push changes to github:
+
+git add styles.css index.html
+git commit -m 'homepage is pretty'
+git push -u origin style-homepage
+
+The last line pushes the changes on your local branch style-homepage to Github.
+
+If your feature is done, it is a good moment to merge your changes into the master branch.
+Pull Requests
+
+After you've pushed your branch to Github, you want to merge it into the master branch.
+1. Click button compare & pull request
+
+2. Create pull request
+
+This is the moment to ask a colleague that didn't work on this piece of code to review it. If they think it looks good to them, proceed to merging it in to the master branch
+3. Merge pull request
+
+    If you are not able to merge your pull request into master directly, please call any of the teachers/coaches around and we will help you to fix it.
+
+    After you merged the pull request in Github, don't forget to tell the rest of your team, so they remember to pull the last state of the master branch when they checkout master ;-)
+
+© 2015 - 2018 • Codaisseur B.V •  v3.3.0
