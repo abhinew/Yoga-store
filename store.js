@@ -32,3 +32,10 @@ var products = [
   }
 
   displayProducts();
+
+  function manageCheckout() {
+    let checkoutButton = document.getElementById("checkout-button");
+    checkoutButton.onclick(function() {
+      
+    });
+  }
