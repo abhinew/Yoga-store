@@ -8,12 +8,13 @@ var products = [
     { referenceNumber: 1237, name: "Bring Yoga To Life", price: 30 },
     { referenceNumber: 1238, name: "Light On Yoga", price: 10 }
   ];
+var selectedProducts = [];
   
   function displayProducts() {
     var table = document.getElementById("products");
     
     for (var key in products) {
-        var row = table.insertRow(0);
+        var row = table.insertRow(1);
         var cell1 = row.insertCell(0);
         var cell2 = row.insertCell(1);
         var cell3 = row.insertCell(2);
@@ -22,7 +23,16 @@ var products = [
         button.type = "button";
         button.className = "btn";
         button.value = "Add to cart";
-       // btn.onclick = (function(entry) {return function() {chooseUser(entry);}})(entry);
+        button.onclick = function() {
+          if(!selectedProducts.includes[products[key]]) {
+            selectedProducts.push(products[key]);
+          }
+          else {
+            let quantity = 1;
+            quantity++;
+          }
+          console.log(selectedProducts);
+        };
     
         cell1.innerHTML = products[key].referenceNumber;
         cell2.innerHTML = products[key].name;
